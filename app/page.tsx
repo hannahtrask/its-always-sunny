@@ -143,10 +143,10 @@ export default function Home() {
 
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
+            {[1, 2, 3, 4, 5, 6].map((item) => (
               <Card
-                key={i}
-                className="overflow-hidden p-1 bg-white/60 shadow-md p-2rem"
+                key={item}
+                className="overflow-hidden p-2 bg-white/60 shadow-md"
               >
                 <CardHeader className="pb-2">
                   <Skeleton className="h-4 w-1/2 mb-2" />
@@ -170,7 +170,7 @@ export default function Home() {
                     className="overflow-hidden bg-white/90 hover:shadow-lg transition-shadow duration-300 p-1 border-green-100"
                   >
                     <CardHeader className="bg-gradient-to-r from-coral-300 to-coral-400 text-white pb-3">
-                      <CardTitle className="flex items-center text-2xl">
+                      <CardTitle className="flex items-center text-2xl oklch(0.279 0.041 260.031)">
                         <MapPin className="mr-2 h-5 w-5" /> {location.name}
                       </CardTitle>
                       <CardDescription className="text-white/90 font-medium">
@@ -179,9 +179,9 @@ export default function Home() {
                     </CardHeader>
                     <CardContent className="pt-6 px-6">
                       <div className="space-y-6">
-                        {location.forecast.map((day, idx) => (
+                        {location.forecast.map((day, index) => (
                           <div
-                            key={idx}
+                            key={index}
                             className="flex items-center justify-between"
                           >
                             <div className="font-medium text-green-800">
