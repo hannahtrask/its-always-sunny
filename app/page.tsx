@@ -1,4 +1,3 @@
-// app/page.tsx
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -109,7 +108,6 @@ export default function Home() {
 
   const handleRefresh = () => {
     setIsLoading(true)
-    // Simulate refresh
     setTimeout(() => setIsLoading(false), 1500)
   }
 
@@ -117,8 +115,8 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-b from-green-100 to-green-200 p-6 md:p-10">
       <div className="max-w-6xl mx-auto">
         <div className="mb-10 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-coral-600 mb-4 flex items-center justify-center">
-            <Sun className="mr-3 h-12 w-12 text-coral-500" />
+          <h1 className="text-3xl md:text-5xl font-bold text-coral-600 mb-4 p-4 flex items-center justify-center">
+            <Sun className="mr-3 h-12 w-12" />
             It&apos;s Always Sunny
           </h1>
           <p className="text-green-700 text-lg md:text-xl">
@@ -140,7 +138,6 @@ export default function Home() {
             Refresh Forecast
           </Button>
         </div>
-
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3, 4, 5, 6].map((item) => (
