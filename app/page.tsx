@@ -115,7 +115,7 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-b from-green-100 to-green-200 p-6 md:p-10">
       <div className="max-w-6xl mx-auto">
         <div className="mb-10 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-coral-600 mb-4 p-4 flex items-center justify-center">
+          <h1 className="text-3xl md:text-5xl font-bold text-coral-600 mb-4 p-4 flex items-center justify-center !p-3">
             <Sun className="mr-3 h-12 w-12" />
             It&apos;s Always Sunny
           </h1>
@@ -129,11 +129,11 @@ export default function Home() {
             placeholder="Filter locations..."
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            className="bg-white/90 border-green-200 focus:border-coral-400 focus:ring-coral-200"
+            className="bg-white/90 border-green-200 focus:border-coral-400 focus:ring-coral-200 !m-2 !p-1"
           />
           <Button
             onClick={handleRefresh}
-            className="bg-coral-400 hover:bg-coral-500 text-white"
+            className="!bg-coral-400 !m-2 !p-1 hover:bg-coral-500 text-white"
           >
             Refresh Forecast
           </Button>
@@ -170,7 +170,7 @@ export default function Home() {
                       <CardTitle className="flex items-center text-2xl oklch(0.279 0.041 260.031)">
                         <MapPin className="mr-2 h-5 w-5" /> {location.name}
                       </CardTitle>
-                      <CardDescription className="text-white/90 font-medium">
+                      <CardDescription className="text-emerald/90 font-medium">
                         {location.country}
                       </CardDescription>
                     </CardHeader>
@@ -205,8 +205,8 @@ export default function Home() {
                       </div>
                     </CardContent>
                     <CardFooter className="bg-green-50 border-t border-green-100 p-4">
-                      <p className="text-sm text-green-600 italic">
-                        Perfect weekend getaway destination!
+                      <p className="text-sm text-green-600 italic !p-2">
+                        Funnnn it&apos;s warm hereeee
                       </p>
                     </CardFooter>
                   </Card>
